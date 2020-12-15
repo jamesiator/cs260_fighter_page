@@ -12,7 +12,7 @@
     </div>
     <footer>
       <router-link to="/edit"><h3>Edit Fighters</h3></router-link>
-      <a href="#"><h2>&lt;~ GitHub Repository ~&gt;</h2></a>
+      <a href="https://github.com/jamesiator/creative4"><h2>&lt;~ GitHub Repository ~&gt;</h2></a>
       <p>explosion clipart from OpenClipart-Vectors on Pixabay</p>
     </footer>
   </div>
