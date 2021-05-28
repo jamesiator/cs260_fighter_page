@@ -40,11 +40,11 @@ export default {
     async getFighters() {
       try {
         let response = await axios.get("/api/fighters");
-        let number = Math.floor(Math.random() * Math.floor(response.data.length));
+        let number = Math.floor(Math.random() * response.data.length);
         this.fighter1 = response.data[number];
-        let number2 = 0;
+        let number2 = number;
         while (number2 === number) {
-          number2 = Math.floor(Math.random() * Math.floor(response.data.length));
+          number2 = Math.floor(Math.random() * response.data.length);
         }
         this.fighter2 = response.data[number2];
         return true;
@@ -54,7 +54,7 @@ export default {
     },
     async doDuel() {
       try {
-        let num = Math.floor(Math.random() * Math.floor(2));
+        let num = Math.floor(Math.random() * 2);
         if (num) {
           this.message = this.fighter1.name + " wins!";
           //await axios.put("/api/win/"+this.fighter1.id);

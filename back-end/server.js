@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 const mongo = require('mongoose');
 
 const app = express();
@@ -23,7 +22,8 @@ const fighterSchema = new mongo.Schema({
 const Fighter = mongo.model('fighter', fighterSchema);
 
 mongo.connect('mongodb://localhost:27017/fighters', {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 });
 
 //uppload a new fighter
